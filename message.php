@@ -1,7 +1,12 @@
 <?php if(isset($_SESSION['message'])) : ?>
-<div class="alert alert-success alert-dismissible fade show" role="alert">
+<div id="alertMessage" class="alert alert-success alert-dismissible fade show" role="alert">
   <strong>Data Saved Successfully!</strong> <?php echo $_SESSION['message']; ?>
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 <?php unset($_SESSION['message']); ?>
+<script>
+    // Auto-hide the alert after 5 seconds
+    setTimeout(function() {
+        document.getElementById('alertMessage').style.display = 'none';
+    }, 1000);
+</script>
 <?php endif; ?>

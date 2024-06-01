@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Display Results</title>
     <link href="asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         body {
             background-color: #f8f9fa;
@@ -122,6 +121,8 @@
         </div>
     </div>
 </div>
+<script src="asset/bootstrap/js/bootstrap.min.js"></script>
+<script src="asset/jquery.js"></script>
 <script>
     function fetchScores() {
         $.ajax({
@@ -151,6 +152,5 @@
         setInterval(fetchScores,0);
     });
 </script>
-<script src="asset/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

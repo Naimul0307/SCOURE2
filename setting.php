@@ -165,12 +165,14 @@ $result_score_types = $con->query($sql_score_types);
                                         <button id="stopButton" class="btn btn-danger d-none mt-2 mb-2" type="button" onclick="stopMeter()">Stop</button>
                                     </div>
                                 </div>
-                                <div class="col-12 mt-2">
+                                <div class="col-12 mt-3">
                                     <button type="submit" class="btn btn-primary w-100">Submit</button>
-                                    <button class="btn btn-light w-100 mt-2" onclick="refreshPage()">Refresh</button>
                                 </div>
                             </div>
                         </form>
+                        <div class="col-12 mt-4">
+                        <button class="btn btn-success w-100 mt-2" onclick="refreshPage()">Refresh</button>
+                        </div>
                     </section>
                 </div>
             </div>
@@ -179,7 +181,7 @@ $result_score_types = $con->query($sql_score_types);
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="asset/bootstrap/js/bootstrap.min.js"></script>
     <script src="asset/function.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="asset/jquery.js"></script>
     <script>
     function fetchCustomers() {
         // Fetch customers from the server
@@ -239,7 +241,11 @@ $result_score_types = $con->query($sql_score_types);
     });
 });
 
-    </script>
+function refreshPage() {
+    location.reload();
+}
+
+</script>
 </script>
 </body>
 </html>
